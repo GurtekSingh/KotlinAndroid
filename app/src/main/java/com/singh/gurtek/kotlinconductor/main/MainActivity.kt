@@ -20,5 +20,7 @@ class MainActivity : BaseActivity() {
 
         val router = appNavigator.attachContainer(this, container, savedInstanceState)
         appNavigator.setRoot(router, GallaryController())
+
+
     }
 }

@@ -19,19 +19,16 @@ class GallaryController : BaseController(R.layout.cont_gallary_view) {
 
     lateinit var recycleView: RecyclerView
 
-
     override fun onAttach(view: View) {
         super.onAttach(view)
         recycleView = view.recyler_view
 
-        Timber.d("onAttach View Called")
 
     }
 
     override fun onContextAvailable(context: Context) {
         super.onContextAvailable(context)
 
-        Timber.d("controller context available")
 
     }
 
