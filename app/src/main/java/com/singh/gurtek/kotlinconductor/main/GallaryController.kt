@@ -17,7 +17,7 @@ import kotlin.concurrent.timer
  */
 class GallaryController : BaseController(R.layout.cont_gallary_view) {
 
-    lateinit var recycleView: RecyclerView
+    private lateinit var recycleView: RecyclerView
 
     override fun onAttach(view: View) {
         super.onAttach(view)
@@ -33,7 +33,6 @@ class GallaryController : BaseController(R.layout.cont_gallary_view) {
     }
 
 
-    override fun giveMeClassToSetTag(): Controller = this
 
 
 }
