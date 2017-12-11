@@ -14,3 +14,7 @@ import android.view.ViewGroup
 public fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false): View {
     return LayoutInflater.from(context).inflate(layoutRes, this, attachToRoot)
 }
+
+public fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToRoot: Boolean = false, inflater: LayoutInflater): View {
+    return inflater.inflate(layoutRes, this, attachToRoot)
+}

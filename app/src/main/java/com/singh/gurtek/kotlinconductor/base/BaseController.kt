@@ -1,33 +1,33 @@
 package com.singh.gurtek.kotlinconductor.base
 
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.LifecycleRegistry
-import android.content.Context
+import android.arch.lifecycle.LifecycleObserver
 import android.support.annotation.LayoutRes
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bluelinelabs.conductor.Controller
 import com.bluelinelabs.conductor.archlifecycle.LifecycleController
-import io.reactivex.Observable
-import timber.log.Timber
+import com.singh.gurtek.kotlinconductor.utils.inflate
+
 
 /**
  * Created by Gurtek singh
  * on 12/2/2017
  * gurtek@protonmail.com
  */
-abstract class BaseController(@LayoutRes val layout: Int) : LifecycleController()  {
+abstract class BaseController<out T : LifecycleObserver>(@LayoutRes val layout: Int) : LifecycleController()  {
 
+  private  var lifeCycleObserver : LifecycleObserver? = null
+      get() = getViewModel()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
-        return inflater.inflate(layout, container, false)
+     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
+        return container.inflate(layout,inflater = inflater)
     }
 
     override fun onAttach(view: View) {
         super.onAttach(view)
-        
-
+        lifecycle?.addObserver(getViewModel())
     }
+
+    abstract fun getViewModel() : T
 
 }
