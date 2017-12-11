@@ -1,4 +1,4 @@
-package com.singh.gurtek.kotlinconductor.adapter
+package com.singh.gurtek.kotlinconductor.ui.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
