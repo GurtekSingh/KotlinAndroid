@@ -9,7 +9,7 @@ import com.singh.gurtek.kotlinconductor.base.BaseViewModel
  */
 class GallaryViewModel : BaseViewModel() {
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+
     fun loadImages(){
 
     }
