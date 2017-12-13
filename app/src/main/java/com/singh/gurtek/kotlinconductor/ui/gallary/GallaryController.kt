@@ -1,6 +1,5 @@
 package com.singh.gurtek.kotlinconductor.main
 
-import android.arch.lifecycle.LifecycleObserver
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View

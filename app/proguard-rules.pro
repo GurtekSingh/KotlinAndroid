@@ -25,3 +25,15 @@
 -dontwarn retrofit2.Platform$Java8
 -keepattributes Signature
 -keepattributes Exceptions
+
+#- moshi converter
+-dontwarn okio.**
+-dontwarn javax.annotation.**
+-keepclasseswithmembers class * {
+    @com.squareup.moshi.* <methods>;
+}
+-keep @com.squareup.moshi.JsonQualifier interface *
+
+-keepclassmembers class kotlin.Metadata {
+    public <methods>;
+}

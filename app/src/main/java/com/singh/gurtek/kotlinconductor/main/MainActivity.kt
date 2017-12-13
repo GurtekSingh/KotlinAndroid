@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.singh.gurtek.kotlinconductor.R
 import com.singh.gurtek.kotlinconductor.base.BaseActivity
 import com.singh.gurtek.kotlinconductor.navigator.AppController
-import com.singh.gurtek.kotlinconductor.ui.gallary.GallaryController
+
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
