@@ -8,7 +8,9 @@ import com.singh.gurtek.kotlinconductor.utils.inflate
 
 
 /**
- * Created by sachtech-pc on 12/2/2017.
+ * Created by Gurtek singh
+ * on on 12/2/2017
+ * gurtek@protonmail.com
  */
 class GallaryAdapter : RecyclerView.Adapter<GallaryAdapter.ViewHolder>() {
 
@@ -26,7 +28,5 @@ class GallaryAdapter : RecyclerView.Adapter<GallaryAdapter.ViewHolder>() {
     override fun getItemCount() = list.size
 
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-    }
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 }

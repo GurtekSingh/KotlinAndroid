@@ -2,6 +2,7 @@ package com.singh.gurtek.kotlinconductor.di
 
 import android.app.Application
 import com.singh.gurtek.kotlinconductor.base.KotlinApp
+import com.singh.gurtek.kotlinconductor.conductordagger.ConductorInjectionModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
@@ -14,6 +15,7 @@ import dagger.android.AndroidInjectionModule
  */
 @ApplicationScope
 @Component(modules = arrayOf(AndroidInjectionModule::class,
+        ConductorInjectionModule::class,
         AppModule::class, ActivityBuilder::class))
 interface AppComponent {
 

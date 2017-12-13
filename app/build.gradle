@@ -16,6 +16,7 @@ ext{
     dagger_version = "2.13"
     conductor_lifecycle="0.1.1"
     retrofit ="2.3.0"
+    ok_logger="3.9.0"
 }
 
 android {
@@ -34,6 +35,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -47,11 +52,12 @@ dependencies {
 
     //testing
     testImplementation 'junit:junit:4.12'
+    testImplementation "org.mockito:mockito-core:2.10.0"
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     //conductor
     implementation "com.bluelinelabs:conductor:$conductor_version"
-    compile "com.bluelinelabs:conductor-archlifecycle:$conductor_lifecycle"
+    implementation "com.bluelinelabs:conductor-archlifecycle:$conductor_lifecycle"
     //rxjava
     implementation "io.reactivex.rxjava2:rxandroid:$rx_android"
     implementation "io.reactivex.rxjava2:rxjava:$rx_java"
@@ -68,7 +74,8 @@ dependencies {
 
     // Retrofit network
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
-
-
+    implementation "com.squareup.okhttp3:logging-interceptor:$ok_logger"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+    implementation "com.squareup.retrofit2:converter-jackson:$retrofit"
 
 }
